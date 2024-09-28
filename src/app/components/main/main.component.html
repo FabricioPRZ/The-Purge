@@ -1,0 +1,48 @@
+<main>
+    <section id="listados">
+      <div class="grupo-container">
+        <h2>Grupo A</h2>
+        <ul id="grupoA">
+          <li *ngFor="let student of studentsA">{{ student.name }}</li>
+        </ul>
+      </div>
+  
+      <div class="grupo-container">
+        <h2>Grupo B</h2>
+        <ul id="grupoB">
+          <li *ngFor="let student of studentsB">{{ student.name }}</li>
+        </ul>
+      </div>
+    </section>
+  
+    <div id="control-purga">
+      <button id="seleccionar" (click)="selectStudents()">
+        Seleccionar Estudiantes
+      </button>
+  
+      <div id="seleccionados">
+        <h3>Estudiantes Seleccionados</h3>
+        <div class="estudiante-seleccionado" id="estudianteA">
+          {{ selectedStudentA?.name || 'Ningún estudiante seleccionado de Grupo A' }}
+        </div>
+        <div class="estudiante-seleccionado" id="estudianteB">
+          {{ selectedStudentB?.name || 'Ningún estudiante seleccionado de Grupo B' }}
+        </div>
+  
+        <button class="purgar-btn" id="purgarA" (click)="purgeStudentA()" [disabled]="!selectedStudentA">
+          Purgar Estudiante A
+        </button>
+        <button class="purgar-btn" id="purgarB" (click)="purgeStudentB()" [disabled]="!selectedStudentB">
+          Purgar Estudiante B
+        </button>
+      </div>
+    </div>
+  
+    <section>
+      <h2>Estudiantes Purgados</h2>
+      <ul id="purgados">
+        <li *ngFor="let student of purgedStudents">{{ student.name }}</li>
+      </ul>
+    </section>
+  </main>
+  

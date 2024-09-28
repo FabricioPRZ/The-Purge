@@ -1,0 +1,93 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .grupo-container {
+        width: 45%;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+    #listados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grupo-container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .estudiante-seleccionado {
+        width: 90%;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .grupo-container {
+        width: 90%;
+    }
+
+    .estudiante-seleccionado {
+        width: 100%;
+    }
+
+    #seleccionados {
+        flex-direction: column;
+    }
+}
+
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+}
